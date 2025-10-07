@@ -1,0 +1,17 @@
+.body{
+    width: auto;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+ background-color: gray;
+}
+
+form{
+    width: 100%;
+    background-color: aliceblue;
+    border: 1cm;
+}
