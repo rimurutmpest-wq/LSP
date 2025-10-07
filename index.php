@@ -115,5 +115,6 @@ $getAll = $stmt->get_result();
         </tr>
         <?php endwhile; ?>
     </table>
+    <img src="gambar.jpeg" alt="">
 </body>
 </html>
