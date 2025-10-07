@@ -35,15 +35,15 @@ $getById = mysqli_query($conn, "SELECT * FROM tasks WHERE id = $id");
         <input type="text" name="id" value="<?= $row['id'] ?>">
         <input type="text" name="nama" value="<?= $row['nama'] ?>">
         <input type="text" name="deskripsi" value="<?= $row['deskripsi'] ?>">
-        <select name = "prioritas" value="<?= $row['prioritas'] ?>">
-        <?php if($row['prioritas'] == "1") :?>
-            <option value="<?= $row['prioritas']?>" selected style="color:green">Urgent</option>
-            <option value= 0 name="tidak-urgent" style="color:green">Tidak_Urgent</option>
-        <?php else : ?>
-            <option value="<?= $row['prioritas']?>" selected style="color:green">Tidak Urgent</option>
-            <option value= 1 name="urgent" style="color:red">Urgent</option>
+        <select name="prioritas">
+            <?php if($row['prioritas'] == "1") : ?>
+                <option value="1" selected>Urgent</option>
+                <option value="0">Tidak Urgent</option>
+            <?php else : ?>
+                <option value="0" selected>Tidak Urgent</option>
+                <option value="1">Urgent</option>
+            <?php endif; ?>
         </select>
-        <?php endif; ?>
         <select name="status" value="<?= $row['status'] ?>">
         <?php if($row['status'] == 1) :?>
             <option value="<?= $row['status']?>" selected> Selesai</option>
